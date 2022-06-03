@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/games-spa/static/css/main.1a143f6c.css",
-    "main.js": "/games-spa/static/js/main.006204ac.js",
+    "main.js": "/games-spa/static/js/main.07e01ad3.js",
     "static/media/Home-icon.png": "/games-spa/static/media/Home-icon.752a4d19424e7b3ffac1.png",
     "index.html": "/games-spa/index.html",
     "main.1a143f6c.css.map": "/games-spa/static/css/main.1a143f6c.css.map",
-    "main.006204ac.js.map": "/games-spa/static/js/main.006204ac.js.map"
+    "main.07e01ad3.js.map": "/games-spa/static/js/main.07e01ad3.js.map"
   },
   "entrypoints": [
     "static/css/main.1a143f6c.css",
-    "static/js/main.006204ac.js"
+    "static/js/main.07e01ad3.js"
   ]
 }
