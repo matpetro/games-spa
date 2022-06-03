@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HomePage from "./components/Home/HomePage";
+import Connect4Page from "./components/Connect4/Connet4Page";
+import GuessNumPage from "./components/GuessNum/GuessNumPage";
+import TenziesPage from "./components/Tenzies/TenziesPage";
+import TicTacToePage from "./components/TicTacToe/TicTacToePage";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/tic-tac-toe" element={<TicTacToePage />} />
+        <Route path="/tenzies" element={<TenziesPage />} />
+        <Route path="/guessthenumber" element={<GuessNumPage />} />
+        <Route path="/connect4" element={<Connect4Page />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

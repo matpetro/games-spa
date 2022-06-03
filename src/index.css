@@ -11,3 +11,302 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  /*Stops page from repositioning due to scroll bar*/
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
+.header--container {
+  text-align: center;
+  padding: 0 16px;
+  height: 16vh;
+  max-width: 100%;
+  font-family: 'Inter', 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8vh;
+  color: white;
+  line-height: 16vh;
+  letter-spacing: -0.075em;
+  background-color: #3d8c9c;
+}
+
+.home--button {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #3d8c9c;
+  bottom: 0%;
+  position: fixed;
+  max-width: 100%;
+  font-family: 'Inter';
+  font-size: 1.5vh;
+  color: white;
+  padding: 5px;
+}
+
+.games--container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 5%;
+  column-gap: 5%;
+  text-align: center;
+  align-items: center;
+  padding: 5% 25%;
+}
+
+.game--pic, .game--name {
+  width: 80%;
+  margin: auto;
+}
+
+.game--pic {
+  height: 50%;
+}
+
+.game--info {
+  border-style: solid;  /* How Border looks */
+  border-radius: 5%; /* Make it shaped like a circle if > 50% */
+  border-width: 2px; /* Width of border */
+  border-color: #3d8c9c; /* Colour of border */
+  width: 100%;
+  cursor: pointer;
+}
+
+.game--name {
+  color: #3d8c9c;
+  font-size: 2vw;
+}
+
+.main {
+  position: relative;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  width: fit-content;
+  height: 70%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.die {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: black;
+  width: 6vh;
+  height: 6vh;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vh;
+  line-height: 4vh;
+  color: #2B283A;
+  /*Next 3 lines allow centering within the div*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.die--container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* Sets number of columns with their size (fr creates things of the same size) */
+  grid-template-rows: auto auto;
+  column-gap: 20px;  /* Padding between columns */
+  row-gap: 20px; /* Padding between rows */
+  margin-bottom: 40px;
+}
+
+
+.roll--button {
+  background: #3d8c9c;
+  border: none;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  width: 20%;
+  height: 6.5vh;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5vh;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 6vh;
+  margin: 0;
+  text-align: center;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  padding: 0 10%;
+  font-weight: 400;
+  font-size: 3vh;
+  margin-top: 0;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  column-gap: 40px;
+  justify-content: space-between;
+  font-size: 3vh;
+}
+
+.guess--input {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  width: 50%;
+  padding: 3vh;
+  height: 9vh;
+  text-align: center;
+  font-family: 'Inter', 'Karla';
+  font-weight: bold;
+  font-size: 3.5vh;
+  background-color: transparent;
+}
+
+.guess--info {
+  font-family: 'Inter', sans-serif;
+  padding: 5% 10%;
+  font-weight: bold;
+  font-size: 5vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  width: 95%;
+  height: 100%;
+}
+
+.modal--content {
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  width: 21%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.close {
+  color: Black;
+  float: right;
+  font-size: 30px;
+}
+
+.close:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.popup--info {
+  text-align: center;
+  font-size: 1.7vh;
+}
+
+.restart--button {
+  height: 3.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1.5em;
+  cursor: pointer;
+  color: white;
+  background-color: #3d8c9c;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5vh;
+  line-height: 19px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.ttt--board {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  align-items: center;
+  background-color: #7ad5ea;
+}
+
+.ttt--cell {
+  width: 14vh;
+  height: 12vh;
+  border: 8px solid #3d8c9c;
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c4--board {
+  display: grid;  /* Makes it grid like */
+  grid-template-columns: repeat(7, 1fr);  /* Sets number of columns with their size (fr creates things of the same size) */
+  text-align: center; /* Center text within */
+  background-color: #3d8c9c; /* Set colour of element */
+  padding: 12px; /* Padding between element and contents */
+  column-gap: 10px;  /* Padding between columns */
+  row-gap: 10px; /* Padding between rows */
+  border-style: solid;  /* How Border looks */
+  border-radius: 20px; /* rounded corners */
+  border-width: 2px; /* Width of border */
+  border-color: black; /* Colour of border */
+}
+
+.c4--cell {
+  width: 5vh;
+  height: 5vh;
+  background-color: white;
+  border-style: solid;  /* How Border looks */
+  border-radius: 50%; /* Make it shaped like a circle if > 50% */
+  border-width: 2px; /* Width of border */
+  border-color: black;
+}
+
+.arrow--container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.arrow {
+  width: 5.5vh;
+  height: 5vh;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  cursor: default;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/0/159.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
