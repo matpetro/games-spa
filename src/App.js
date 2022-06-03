@@ -14,11 +14,11 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/tic-tac-toe" element={<TicTacToePage />} />
-        <Route path="/tenzies" element={<TenziesPage />} />
-        <Route path="/guessthenumber" element={<GuessNumPage />} />
-        <Route path="/connect4" element={<Connect4Page />} />
+        <Route path="/games-spa" element={<HomePage />}/>
+        <Route path="/games-spa/tic-tac-toe" element={<TicTacToePage />} />
+        <Route path="/games-spa/tenzies" element={<TenziesPage />} />
+        <Route path="/games-spa/guessthenumber" element={<GuessNumPage />} />
+        <Route path="/games-spa/connect4" element={<Connect4Page />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
