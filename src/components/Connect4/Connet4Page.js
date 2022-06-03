@@ -174,7 +174,7 @@ function Connect4Page() {
 
     return (
         <>
-            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/")} className="home--button"/>
+            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/games-spa")} className="home--button"/>
             <main className="main">
                 <h1 className="title">Connect4</h1>
                 {showPopUp && <PopUp onClose={togglePopUp} winText={tie && !won ? "Tie!" : `Player ${redTurn ? "Yellow" : "Red"} Won!`} playAgain={restartGame} won={true} />}

@@ -58,7 +58,7 @@ function GuessNumPage() {
 
     return (
         <>
-            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/")} className="home--button"/>
+            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/games-spa")} className="home--button"/>
             <main className="main">
                 <h1 className="title">Guess the Number</h1>
                 <p className="instructions">A random number between 1 and 100 has been chosen, try to figure out what it is in less than 5 guesses!</p>

@@ -73,7 +73,7 @@ function TicTacToePage() {
     const boardCells = board.map((row, rowInd) => row.map((cell, cellInd) => <div key={[rowInd, cellInd]} onClick={makeMove} data-row={rowInd} data-col={cellInd} style={cell === "" && !won ? {cursor: "pointer"} : {}} className="ttt--cell">{cell}</div>));
     return (
         <>
-            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/")} className="home--button"/>
+            <input type="image" alt="" src={homeIcon} onClick={() => navigate("/games-spa")} className="home--button"/>
             <main className="main">
                 <h1 className="title">TicTacToe</h1>
                 {showPopUp && <PopUp onClose={togglePopUp} winText={tie && !won ? "Tie!" : `Player ${xTurn ? "O" : "X"} Won!`} playAgain={restartGame} won={true} />}

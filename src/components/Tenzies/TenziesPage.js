@@ -96,7 +96,7 @@ function TenziesPage() {
   const dieElements = dice.map(die => <Die key={die.id} id={die.id} toggle={holdDice} value={die.value} isHeld={die.isHeld}/>);
   return (
     <>
-      <input type="image" alt="" src={homeIcon} onClick={() => navigate("/")} className="home--button"/>
+      <input type="image" alt="" src={homeIcon} onClick={() => navigate("/games-spa")} className="home--button"/>
       <main className="main">
 
         {showPopUp && <PopUp onClose={togglePopUp} winText="You Won!" playAgain={rollDice} won={true} />}
